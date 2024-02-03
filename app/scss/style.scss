@@ -1,0 +1,34 @@
+@import '_nullstyle',
+        '_burger_menu',
+        '_header',
+        '_main-one',
+        '_main-two',
+        '_main-three',
+        '_main-four',
+        '_main-five',
+        '_main-six',
+        '_main-seven',
+        '_main-eight',
+        '_footer';
+
+body {
+    font-family: Raleway;
+}
+
+.section {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    // margin: 0 auto;
+    // padding-left: 10px;
+    // padding-right: 10px;
+}
+
+.wrapper-container {
+    max-width: var(--wrapper-width, 1440px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.services{
+    max-width: 800px;
+}

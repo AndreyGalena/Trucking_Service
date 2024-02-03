@@ -1,0 +1,98 @@
+// Действия происходят при разрешении > 900px.
+@media screen and (max-width: 900px) {
+    body.active {
+        // страничка не скролится.
+        overflow: hidden;
+    }
+    .header__one-block {
+        // до нажатия на burger.
+        .menu-block {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; // для скрола меню
+            padding-top: 70px;
+            z-index: 10;
+            background: linear-gradient(to bottom right, rgba(28, 234, 190, 0.8), rgba(47, 150, 209, 0.8) 110%);
+            transition: all 1s ease 0s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center !important;
+            .menu {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-size: 15px;
+                li {
+                    font-weight: 700;
+                    padding: 25px 15px;
+                    transition: all .3s ease 0s;
+                }
+            }
+        }
+        // после нажатия на burger.
+        .menu-block.active {
+            top: 0;
+            .menu {
+                li {
+                    font-size: 35px;
+                    padding: 25px 15px;
+                }
+            }
+        }
+        .menu-btn {
+            display: block !important;
+        }
+    }
+
+    // Внешний вид Бургер элементов
+    // До нажатия burger.
+    .menu-btn {
+        position: fixed;
+        top: 28px;
+        right: 5vh;
+        width: 50px;
+        height: 50px;
+        background-color: #5a8b87;
+        border-radius: 50%;
+        z-index: 20;
+        margin: 10px 0px 0px 0px;
+        span {
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /*Позицыонирование линий*/
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            transition: all 0.5s;
+        }
+        span:nth-of-type(2) {
+            /*Верхняя линия чуть выше*/
+            top: calc(50% - 5px);
+        }
+        span:nth-of-type(3) {
+            /*Нижняя линия чуть ниже*/
+            top: calc(50% + 5px);
+        }
+    }
+    // При нажатом burger.
+    /* При добавлении class .active c помощю js */
+    .menu-btn.active {
+        background-color: #85aaf0;
+        span:nth-of-type(1) {
+            display: none;
+        }
+        span:nth-of-type(2) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
+        }
+        span:nth-of-type(3) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(-45deg);
+        }
+    }
+}
