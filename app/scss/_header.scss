@@ -1,4 +1,8 @@
 // Когда < 900px
+.bg-header {
+    height: 330px;
+    background: url('../img/bg_header.webp')44% 0/contain  no-repeat;
+}
 .header {
     font-size: 20px; // !!!!!!!!!!!!!!!!!!
     &__one-block {
@@ -22,11 +26,12 @@
                     font-weight: 600;
                     padding: 0 23px;
                     a {
-                        color: rgb(12, 12, 12);
+                        // color: rgb(12, 12, 12);
+                        color: brown;
                         transition-duration: 0.3s;
                     }
                     a:hover {
-                        color: rgb(220, 11, 11);
+                        color: rgb(233, 222, 222);
                     }
                 }
             }

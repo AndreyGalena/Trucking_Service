@@ -1,6 +1,6 @@
 Gulp_start.txt 
 node_modules
-dist/
+# dist/
 package-lock.json
 # /app/video
 # /app/img
