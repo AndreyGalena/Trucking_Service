@@ -257,11 +257,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .wrapper-container {
   display: flex;
-  background-color: rgb(21, 19, 72);
+  background-color: #bebdc5;
+  flex-wrap: wrap;
   padding: 20px;
 }
 .footer .wrapper-container .icon-block {
-  flex: 1;
+  flex: 1 0 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,18 +272,27 @@ h1, h2, h3, h4, h5, h6 {
   filter: drop-shadow(20px 15px 4px #000000);
 }
 .footer .wrapper-container .map-block {
-  flex: 1;
+  flex: 0 0 500px;
   display: flex;
   justify-content: center;
+  min-height: 200px;
+}
+.footer .wrapper-container .map-block iframe {
+  box-shadow: 0px 0px 10px black;
+  transition: 0.5s;
+}
+.footer .wrapper-container .map-block iframe:hover {
+  box-shadow: 0px 0px 25px black;
+  transform: scale(1.2);
 }
 .footer .wrapper-container .contact-block {
-  flex: 1;
+  flex: 1 0 30%;
 }
 .footer .wrapper-container .contact-block .our-contacts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin: 20px 10px;
 }
 .footer .wrapper-container .contact-block .our-contacts h3 {
   font-size: 30px;
@@ -309,25 +319,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer .wrapper-container .contact-block .our-contacts .address {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 20px;
   text-align: center;
+  text-shadow: 2px 2px 1px rgb(216, 200, 200);
 }
 .footer .wrapper-container .contact-block .our-contacts .my-mail-block {
   padding: 20px 0;
 }
 .footer .wrapper-container .contact-block .our-contacts .footer-icons {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 10px;
 }
 .footer .wrapper-container .contact-block .our-contacts .footer-icons li {
-  margin: 0 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  filter: drop-shadow(10px 5px 4px #000000);
+  transition: 0.3s;
 }
 .footer .wrapper-container .contact-block .our-contacts .footer-icons li:hover {
+  filter: drop-shadow(5px 5px 2px #000000);
   transform: scale(1.5);
 }
 
+@media screen and (max-width: 800px) {
+  .footer .wrapper-container .map-block {
+    flex: 1 1 100%;
+    margin: 40px 0;
+  }
+}
 body {
   font-family: Raleway;
   background-image: url("../img/header_img/escheresque_ste.png");

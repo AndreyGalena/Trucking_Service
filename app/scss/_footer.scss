@@ -1,9 +1,10 @@
 .footer .wrapper-container {
     display: flex;
-    background-color: rgb(21, 19, 72);
+    background-color: #bebdc5;
+    flex-wrap: wrap;
     padding: 20px;
     .icon-block{
-        flex: 1;
+        flex: 1 0 30%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -13,17 +14,26 @@
         }
     }
     .map-block {
-        flex: 1;
+        flex: 0 0 500px;
         display: flex;
         justify-content: center;
+        min-height: 200px;
+        iframe {
+            box-shadow: 0px 0px 10px black;
+            transition: .5s;
+        }
+    }
+    .map-block iframe:hover {
+        box-shadow: 0px 0px 25px black;
+        transform: scale(1.2);
     }
     .contact-block {
-        flex: 1;
+        flex: 1 0 30%;
         .our-contacts{
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 10px;
+            margin: 20px 10px;
             h3 {
                 font-size: 30px;
                 font-weight: 600;
@@ -49,24 +59,38 @@
             }
             .address {
                 font-size: 15px;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 20px;
                 text-align: center;
+                text-shadow: 2px 2px 1px rgb(216, 200, 200);
             }
             .my-mail-block {
                 padding: 20px 0;
             }
             .footer-icons {
                 display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap;
                 padding: 10px;
                 li {
-                    margin: 0 10px;
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    margin: 10px;
+                    filter: drop-shadow(10px 5px 4px #000000);
+                    transition: .3s;
                 }
             }
             .footer-icons li:hover {
+                filter: drop-shadow(5px 5px 2px #000000);
                 transform: scale(1.5);
             }
         }
-    }
+    } 
 }
+
+@media screen and (max-width: 800px) {
+    .footer .wrapper-container .map-block {
+        flex: 1 1 100%;
+        margin: 40px 0;
+    }
+  }
