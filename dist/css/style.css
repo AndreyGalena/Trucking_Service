@@ -161,25 +161,25 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   display: flex;
   flex-direction: column;
-  background: url("../img/bg_header.webp") 0 0/cover no-repeat;
+  background: url("../img/header_img/bg_header.webp") 40% 0/cover no-repeat;
 }
 .header__one-block {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background-color: rgba(47, 150, 209, 0.7);
+  background-color: rgba(115, 118, 119, 0.7);
 }
 .header__one-block .icon-block {
-  padding: 20px 0 0 20px;
+  flex: 1;
+  padding: 20px 0 0 clamp(20px, 10vw, 200px);
 }
 .header__one-block .icon-block .icon img {
-  width: 120px;
-  filter: drop-shadow(3px 3px 4px #000000);
+  width: clamp(50px, 8em, 120px);
+  filter: drop-shadow(20px 15px 4px #000000);
 }
 .header__one-block .menu-btn {
   display: none;
 }
 .header__one-block .menu-block {
+  flex: 1;
   padding-top: 20px;
 }
 .header__one-block .menu-block .menu {
@@ -187,19 +187,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__one-block .menu-block .menu .item {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   font-style: italic;
   padding: 0 23px;
   overflow: hidden;
-}
-.header__one-block .menu-block .menu .item .line {
-  max-width: 100%;
-  min-height: 2px;
-  background-color: red;
-  margin-top: 2px;
-  transform: translateX(200%);
-  transition: 0.3s;
 }
 .header__one-block .menu-block .menu .item a {
   color: #eef5f0;
@@ -207,17 +199,36 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 3px 0px 2px #000;
   transition-duration: 0.3s;
 }
-.header__one-block .menu-block .menu .item a:hover {
-  color: rgb(241, 6, 6);
+.header__one-block .menu-block .menu .item .line-block {
+  display: flex;
+}
+.header__one-block .menu-block .menu .item .line-block .line-left,
+.header__one-block .menu-block .menu .item .line-block .line-rigte {
+  flex: 1;
+  min-height: 2px;
+  margin-top: 2px;
+  transition: 0.3s;
+}
+.header__one-block .menu-block .menu .item .line-block .line-left {
+  background-color: red;
+  transform: translateX(300%);
+}
+.header__one-block .menu-block .menu .item .line-block .line-rigte {
+  background-color: rgb(68, 255, 0);
+  transform: translateX(-300%);
 }
 .header__one-block .menu-block .menu .item:hover {
   transform: scale(1.2);
 }
-.header__one-block .menu-block .menu .item:hover .line {
+.header__one-block .menu-block .menu .item:hover a {
+  color: rgb(241, 6, 6);
+}
+.header__one-block .menu-block .menu .item:hover .line-left,
+.header__one-block .menu-block .menu .item:hover .line-rigte {
   transform: translateX(0);
 }
 .header__two-block {
-  background-color: rgba(47, 150, 209, 0.7);
+  background-color: rgba(115, 118, 119, 0.7);
 }
 .header__two-block .title-block {
   display: flex;
@@ -244,16 +255,82 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 20px;
 }
 
-@font-face {
-  font-family: "FontAwesome";
-  src: url("../fonts/fontawesome-webfont.eot");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+.footer .wrapper-container {
+  display: flex;
+  background-color: rgb(21, 19, 72);
+  padding: 20px;
 }
+.footer .wrapper-container .icon-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .wrapper-container .icon-block .icon img {
+  width: clamp(50px, 8em, 120px);
+  filter: drop-shadow(20px 15px 4px #000000);
+}
+.footer .wrapper-container .map-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.footer .wrapper-container .contact-block {
+  flex: 1;
+}
+.footer .wrapper-container .contact-block .our-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.footer .wrapper-container .contact-block .our-contacts h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: orangered;
+  text-shadow: 2px 2px 2px black;
+  padding-bottom: 20px;
+}
+.footer .wrapper-container .contact-block .our-contacts .tel {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.footer .wrapper-container .contact-block .our-contacts .name-company {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 20px;
+}
+.footer .wrapper-container .contact-block .our-contacts .address {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
+.footer .wrapper-container .contact-block .our-contacts .my-mail-block {
+  padding: 20px 0;
+}
+.footer .wrapper-container .contact-block .our-contacts .footer-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.footer .wrapper-container .contact-block .our-contacts .footer-icons li {
+  margin: 0 10px;
+}
+.footer .wrapper-container .contact-block .our-contacts .footer-icons li:hover {
+  transform: scale(1.5);
+}
+
 body {
   font-family: Raleway;
-  background-image: url("../img/escheresque_ste.png");
+  background-image: url("../img/header_img/escheresque_ste.png");
 }
 
 .section {
