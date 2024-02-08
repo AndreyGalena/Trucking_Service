@@ -255,6 +255,57 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 20px;
 }
 
+.possibilities-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: white;
+}
+.possibilities-block__block-one {
+  background: url("../img/main-one_img/expedited-freight-company.png.webp") 0 0/cover no-repeat;
+}
+.possibilities-block__block-two {
+  background: url("../img/main-one_img/freight-shipping-768x768-1-e1677702078603.jpg.webp") 0 0/cover no-repeat;
+}
+.possibilities-block__block-three {
+  background: url("../img/main-one_img/reefer-trailer.jpg.webp") 0 0/cover no-repeat;
+}
+.possibilities-block .main-block {
+  flex: 1 1 400px;
+  margin: 10px;
+  overflow: hidden;
+}
+.possibilities-block .main-block .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: rgba(62, 100, 135, 0.85);
+  padding: 20px 10px 30px;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+.possibilities-block .main-block .content .title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+.possibilities-block .main-block .content .subtitle {
+  max-width: 350px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  color: white;
+  overflow: auto;
+  padding: 0 20px;
+}
+.possibilities-block .main-block:hover .content {
+  transform: translateY(0);
+}
+
 .footer .wrapper-container {
   display: flex;
   background-color: #bebdc5;
