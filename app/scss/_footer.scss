@@ -8,9 +8,39 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .icon img{
-            width: clamp(50px, 8em, 120px);
-            filter: drop-shadow(20px 15px 4px #000000);
+        .icon {
+            display: flex;
+            overflow: hidden;
+            img {
+                width: clamp(50px, 8em, 120px);
+                filter: drop-shadow(10px 10px 3px #000000);
+                z-index: 1;
+            }
+            .line-vertically {
+                width: 4px;
+                background: #5f5d5d;
+                border-radius: 20px;
+                margin: 0 20px;
+            }
+            .logo-footer {
+                flex: 0 1 50px;
+                display: flex;
+                align-items: center;
+                font-style: italic;
+                font-size: clamp(30px, 3vw, 50px);
+                font-weight: 500;
+                text-transform: uppercase;
+                color: #d98813;
+                // transition: 3s;
+                // transform: translateX(-300px);
+            }
+            // .logo-footer {
+            //     transition: 3s;
+            //     transform: translateX(-300px);
+            // }
+            .element-show {
+                transform: translateX(0) !important;
+            }
         }
     }
     .map-block {
