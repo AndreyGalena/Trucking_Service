@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   overflow: hidden;
   /* Пока видео не загрузилось будет */
-  background: #ccc url("../img/main-one_img/bg_Video.jpg") no-repeat 50% 50%;
+  background: #ccc url("../img/main-one_img/bg_Video_min.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
 .main-one__intro-block .intro-media .media-video {
@@ -345,115 +345,13 @@ h1, h2, h3, h4, h5, h6 {
 .possibilities-block__block-four {
   background: url("../img/main-two_img/our-mission_min.jpg") no-repeat;
 }
-.possibilities-block__block-five {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .possibilities-block__block-five .media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   /* Пока видео не загрузилось будет */
-  background: #ccc url("../img/main-one_img/bg_Video.jpg") no-repeat 50% 50%;
-  background-size: cover;
-}
-.possibilities-block__block-five .media .media-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-}
-.possibilities-block__block-five .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 20px 20px 20px 50px;
-  z-index: 7;
-}
-.possibilities-block__block-five .content .title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 2px;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-}
-.possibilities-block__block-five .content .subtitle {
-  max-width: 350px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 1px;
-  color: white;
-  overflow: auto;
-  padding: 0 20px;
-}
-.possibilities-block__block-six {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #ccc url("../img/main-two_img/our-team_min.jpg") no-repeat 50% 50%;
 }
 .possibilities-block__block-six .media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   /* Пока видео не загрузилось будет */
-  background: #ccc url("../img/main-one_img/bg_Video.jpg") no-repeat 50% 50%;
-  background-size: cover;
-}
-.possibilities-block__block-six .media .media-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-}
-.possibilities-block__block-six .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 20px 20px 20px 50px;
-  z-index: 7;
-}
-.possibilities-block__block-six .content .title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 2px;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-}
-.possibilities-block__block-six .content .subtitle {
-  max-width: 350px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 1px;
-  color: white;
-  overflow: auto;
-  padding: 0 20px;
+  background: #ccc url("../img/main-two_img/our-trucks_min.jpg") no-repeat 50% 50%;
 }
 .possibilities-block .main-block {
   flex: 1 1 400px;
@@ -490,13 +388,66 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto;
   padding: 0 20px;
 }
+.possibilities-block .video-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.possibilities-block .video-block .media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+.possibilities-block .video-block .media .media-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+.possibilities-block .video-block .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px 20px 50px;
+  z-index: 7;
+}
+.possibilities-block .video-block .content .title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+.possibilities-block .video-block .content .subtitle {
+  max-width: 350px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: white;
+  overflow: auto;
+  padding: 0 20px;
+}
 .possibilities-block .main-block:hover .content {
   transform: translateY(0);
 }
 
 .footer .wrapper-container {
   display: flex;
-  background: url("../img/footer_img/pexels-max-andrey_bg.jpg") 0 0/cover no-repeat;
+  background-color: #bebdc5;
   flex-wrap: wrap;
   padding: 20px;
 }

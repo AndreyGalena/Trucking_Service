@@ -10,9 +10,7 @@
     background-color: #a7aeb0;
     .icon-block {
         flex: 1;
-        // overflow: hidden;
         padding: 5px 0 5px clamp(20px, 7vw, 100px);
-        // transform: translateX(0);
         .icon {
             display: flex;
             img {
@@ -38,13 +36,6 @@
             }
         }
     }
-    // .element-animation{
-    //     transform: translateX(0);
-    // }
-    // .icon-block .element-show {
-    //     transition: 3s;
-    //     transform: translateX(100%);
-    // }
     .menu-btn {
         display: none;
     }
