@@ -4,18 +4,133 @@
     flex-wrap: wrap;
     background: white;
     &__block-one {
-        background: url("../img/main-one_img/expedited-freight-company.png.webp")0 0/cover no-repeat;
+        background: url("../img/main-two_img/expedited-freight-company_min.png.webp")no-repeat;
     }
     &__block-two {
-        background: url("../img/main-one_img/freight-shipping-768x768-1-e1677702078603.jpg.webp")0 0/cover no-repeat;
+        background: url("../img/main-two_img/freight-shipping-768x768_min.jpg.webp")no-repeat;
     }
     &__block-three {
-        background: url("../img/main-one_img/reefer-trailer.jpg.webp")0 0/cover no-repeat;
+        background: url("../img/main-two_img/reefer-trailer_min.jpg.webp")no-repeat;
+    }
+    &__block-four {
+        background: url("../img/main-two_img/our-mission_min.jpg")no-repeat;
+    }
+    &__block-five {
+        // background: url("../img/main-two_img/our-team_min.webp")no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            /* Пока видео не загрузилось будет */
+            background: #ccc url("../img/main-one_img/bg_Video.jpg")no-repeat 50% 50%;
+            background-size: cover;
+            .media-video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px 20px 50px;
+            z-index: 7;
+            .title {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: 2px;
+                color: white;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .subtitle {
+                max-width: 350px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 25px;
+                letter-spacing: 1px;
+                color: white;
+                overflow: auto;
+                padding: 0 20px;
+            }
+        }
+    }
+    &__block-six {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            /* Пока видео не загрузилось будет */
+            background: #ccc url("../img/main-one_img/bg_Video.jpg")no-repeat 50% 50%;
+            background-size: cover;
+            .media-video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px 20px 50px;
+            z-index: 7;
+            .title {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: 2px;
+                color: white;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .subtitle {
+                max-width: 350px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 25px;
+                letter-spacing: 1px;
+                color: white;
+                overflow: auto;
+                padding: 0 20px;
+            }
+        }
     }
     .main-block {
         flex: 1 1 400px;
         margin: 10px;
         overflow: hidden;
+        background-size: cover;
         .content {
             display: flex;
             flex-direction: column;
@@ -29,6 +144,7 @@
                 font-size: 30px;
                 font-weight: 700;
                 line-height: 40px;
+                letter-spacing: 2px;
                 color: white;
                 text-align: center;
                 padding: 30px 20px;
@@ -38,6 +154,7 @@
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 25px;
+                letter-spacing: 1px;
                 color: white;
                 overflow: auto;
                 padding: 0 20px;

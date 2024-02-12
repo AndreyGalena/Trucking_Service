@@ -1,6 +1,7 @@
 .footer .wrapper-container {
     display: flex;
     background-color: #bebdc5;
+    // background: url("../img/footer_img/pexels-max-andrey_bg.jpg")0 0/cover no-repeat;
     flex-wrap: wrap;
     padding: 20px;
     .icon-block{
@@ -30,7 +31,7 @@
                 font-size: clamp(30px, 3vw, 50px);
                 font-weight: 500;
                 text-transform: uppercase;
-                color: #d98813;
+                color: #161615;
                 // transition: 3s;
                 // transform: translateX(-300px);
             }
@@ -38,9 +39,9 @@
             //     transition: 3s;
             //     transform: translateX(-300px);
             // }
-            .element-show {
-                transform: translateX(0) !important;
-            }
+            // .element-show {
+            //     transform: translateX(0) !important;
+            // }
         }
     }
     .map-block {
