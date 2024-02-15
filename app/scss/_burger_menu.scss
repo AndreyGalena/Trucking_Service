@@ -1,5 +1,5 @@
-// Действия происходят при разрешении > 900px.
-@media screen and (max-width: 950px) {
+// Действия происходят при разрешении > 1200px.
+@media screen and (max-width: 1200px) {
     body.active {
         // страничка не скролится.
         overflow: hidden;

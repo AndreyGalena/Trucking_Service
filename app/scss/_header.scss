@@ -1,20 +1,26 @@
-// Когда < 900px
+// Когда < 1200px
 .sticky-style {
     position: sticky;
     top: 0;
     z-index: 10;
 }
+@media screen and (max-width: 750px) {
+    .sticky-style {
+        position: relative;
+    }
+}
 
 .header {
     display: flex;
-    background-color: #a7aeb0;
+    flex-wrap: wrap;
+    background-color: #878981;
     .icon-block {
         flex: 1;
-        padding: 5px 0 5px clamp(20px, 7vw, 100px);
+        padding: 5px 0 5px clamp(20px, 3vw, 100px);
         .icon {
             display: flex;
             img {
-                flex: 0 0;
+                flex: 0 0 85px;
                 width: clamp(20px, 3em, 100px);
                 filter: drop-shadow(10px 10px 3px #000000);
             }
@@ -29,10 +35,37 @@
                 display: flex;
                 align-items: center;
                 font-style: italic;
-                font-size: 20px;
+                font-size: 40px;
                 font-weight: 500;
                 text-transform: uppercase;
                 color: #161615;
+            }
+        }
+    }
+    .contact-block {
+        flex: 1 0;
+        margin: 20px 30px;
+        .contact {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .contact-title {
+                font-size: 30px;
+                font-weight: 600;
+                color: #a4871f;
+                text-shadow: 2px 1px 3px black;
+            }
+            .tel {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 20px 0;
+            }
+            .my-mail-block {
+                font-size: 15px;
+                font-weight: 500;
             }
         }
     }
@@ -47,15 +80,15 @@
             height: 100%;
             .item {
                 list-style-type: none;
-                font-size: 30px;
+                font-size: 20px;
                 font-weight: 600;
                 font-style: italic;
                 padding: 0 23px;
                 overflow: hidden;
                 a {
-                    color: #eef5f0;
+                    color: #0e0f0e;
                     transform: scale(2);
-                    text-shadow: 3px 0px 2px #000;
+                    // text-shadow: 3px 0px 2px #a4871f;
                     transition-duration: .3s;
                 }
                 .line-block{
@@ -80,7 +113,7 @@
             .item:hover {
                 transform: scale(1.2);
                 a {
-                    color: rgb(241, 6, 6);
+                    color: #a4871f;
                 }
                 .line-left, 
                 .line-rigte {

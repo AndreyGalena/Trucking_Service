@@ -1,6 +1,6 @@
 .footer .wrapper-container {
     display: flex;
-    background-color: #bebdc5;
+    background-color: #878981;
     // background: url("../img/footer_img/pexels-max-andrey_bg.jpg")0 0/cover no-repeat;
     flex-wrap: wrap;
     padding: 20px;
@@ -28,7 +28,8 @@
                 display: flex;
                 align-items: center;
                 font-style: italic;
-                font-size: clamp(30px, 3vw, 50px);
+                // font-size: clamp(30px, 3vw, 50px);
+                font-size: 40px;
                 font-weight: 500;
                 text-transform: uppercase;
                 color: #161615;
