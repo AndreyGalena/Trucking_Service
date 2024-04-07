@@ -1,0 +1,65 @@
+.block-row {
+    padding-top: 20px;
+    background-color: aqua;
+    &__column-1, 
+    &__column-3 {
+        flex-wrap: wrap;
+    }
+    &__column-1,
+    &__column-2,
+    &__column-3,
+    &__column-4 {
+        display: flex;
+        justify-content: center;
+    }
+    &__column-3,
+    &__column-11, 
+    &__column-12 {
+        margin: 10px;
+    }
+}
+
+.text-input {
+    width: clamp(250px, 90vw, 415px);
+    min-height: 55px;
+    color: #0c0c0c;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #d3d4d6;
+    padding-left: 10px;
+    margin: 10px 5px 5px;
+}
+.form-label {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(82, 80, 80);
+}
+.text-message {
+    width: clamp(250px, 90vw, 862px);
+    min-height: 200px;
+    color: #0e0e0e;
+    font-size: 25px;
+    border-radius: 5px;
+    // background: url(../img/Your_Message.png) 25px 17px no-repeat;
+    background-color: #d3d4d6;
+    padding: 10px 0px 0px 10px;
+    margin: 0px 0px 0px 10px;
+}
+
+.button {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #30bae7;
+    padding: 23px clamp(40px, 7vw, 90px);
+    margin: clamp(30px, 7vw, 60px) 15px clamp(50px, 7vw, 115px);
+    transition-duration: 0.3s;
+}
+.button:hover {
+    color: #000;
+    background-color: #0792c1;
+    padding: 25px clamp(40px, 8vw, 100px);
+    margin: clamp(30px, 7vw, 58px) 15px clamp(50px, 7vw, 113px);
+}

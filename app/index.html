@@ -195,7 +195,38 @@
 </section>
     <section class="section">
     <div class="wrapper-container">
-        
+        <div class="main-three">
+            <div class="block-row">
+                <form method="post" action="#">
+                    <!-- {% csrf_token %} -->
+                    <div class="block-row__column-1">
+                        <!-- Первая колонка -->
+                        <div class="block-row__column-11">
+                            <label for="user_name" class="form-label">Your Name</label>
+                            <input class="text-input" type="text" name="user_name" 
+                            id="user_name" required tabindex="1" placeholder="Enter your name...">
+                        </div>
+                        <!-- Вторая колонка -->
+                        <div class="block-row__column-12">
+                            <label for="user_email" class="form-label">Email address</label>
+                            <input class="text-input" type="email" name="user_email" id="user_email"
+                            aria-describedby="emailHelp" required tabindex="2" placeholder="Enter your email...">
+                        </div>
+                    </div>
+                    <!-- Третья колонка -->
+                    <div class="block-row__column-3">
+                        <label for="comment" class="form-label">Your Comment</label>
+                        <textarea class="text-message" name="comment" id="comment" tabindex="3" placeholder="Enter what would you like"></textarea>
+                    </div>
+                    <!-- Кнопка -->
+                    <div class="block-row__column-4">
+                        <button class="button" type="button">
+                            SEND MESSAGE
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
     <footer class="footer">
