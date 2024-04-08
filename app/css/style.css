@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   overflow: hidden;
   /* Пока видео не загрузилось будет */
-  background: #ccc url("../img/main-one_img/bg_Video_min.jpg") no-repeat 50% 50%;
+  background: #ccc url("../img/main-one_img/bg_Video_min.webp") no-repeat 50% 50%;
   background-size: cover;
 }
 .main-one__intro-block .intro-media .media-video {
@@ -366,16 +366,16 @@ h1, h2, h3, h4, h5, h6 {
   background: white;
 }
 .possibilities-block__block-one {
-  background: url("../img/main-two_img/expedited-freight-company_min.png.webp") no-repeat;
+  background: url("../img/main-two_img/expedited-freight-company_min.webp") no-repeat;
 }
 .possibilities-block__block-two {
-  background: url("../img/main-two_img/freight-shipping-768x768_min.jpg.webp") no-repeat;
+  background: url("../img/main-two_img/freight-shipping-768x768_min.webp") no-repeat;
 }
 .possibilities-block__block-three {
-  background: url("../img/main-two_img/reefer-trailer_min.jpg.webp") no-repeat;
+  background: url("../img/main-two_img/reefer-trailer_min.webp") no-repeat;
 }
 .possibilities-block__block-four {
-  background: url("../img/main-two_img/our-mission_min.jpg") no-repeat;
+  background: url("../img/main-two_img/our-mission_min.webp") no-repeat;
 }
 .possibilities-block__block-five .media {
   /* Пока видео не загрузилось будет */
@@ -477,66 +477,81 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-.block-row {
-  padding-top: 20px;
-  background-color: aqua;
+.main-three {
+  background: url("../img/main-three_img/transport-trucks_min.webp") 0 50%/cover no-repeat;
+  padding: clamp(40px, 7vh, 60px) 0px;
 }
-.block-row__column-1, .block-row__column-3 {
+
+.input-block {
+  padding: 10px;
+  margin: 10px 30px;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(238, 244, 244);
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
   flex-wrap: wrap;
+  margin: 10px 0px;
 }
-.block-row__column-1, .block-row__column-2, .block-row__column-3, .block-row__column-4 {
+
+.col-25 {
+  flex: 0 1 100px;
+  display: flex;
+  align-items: center;
+}
+
+.col-25 label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.col-75 {
+  flex: 1 1 200px;
+}
+
+.col-75 input {
+  font-size: 16px;
+  font-weight: 500;
+  height: 30px;
+  min-width: 100%;
+  border-radius: 5px;
+  padding: 3px 5px;
+  box-sizing: border-box;
+  border: 1px solid rgb(110, 108, 108);
+  background-color: rgb(237, 237, 243);
+}
+
+.col-75 textarea {
+  font-size: 16px;
+  font-weight: 500;
+  min-height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3px 5px;
+  box-sizing: border-box;
+  border: 1px solid rgb(110, 108, 108);
+}
+
+.comment-block {
+  align-items: flex-start;
+}
+
+.row-button {
   display: flex;
   justify-content: center;
 }
-.block-row__column-3, .block-row__column-11, .block-row__column-12 {
-  margin: 10px;
-}
 
-.text-input {
-  width: clamp(250px, 90vw, 415px);
-  min-height: 55px;
-  color: #0c0c0c;
-  font-size: 18px;
-  border-radius: 5px;
-  background-color: #d3d4d6;
-  padding-left: 10px;
-  margin: 10px 5px 5px;
-}
-
-.form-label {
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(82, 80, 80);
-}
-
-.text-message {
-  width: clamp(250px, 90vw, 862px);
-  min-height: 200px;
-  color: #0e0e0e;
-  font-size: 25px;
-  border-radius: 5px;
-  background-color: #d3d4d6;
-  padding: 10px 0px 0px 10px;
-  margin: 0px 0px 0px 10px;
-}
-
-.button {
-  color: #fff;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 5px;
-  background-color: #30bae7;
-  padding: 23px clamp(40px, 7vw, 90px);
-  margin: clamp(30px, 7vw, 60px) 15px clamp(50px, 7vw, 115px);
-  transition-duration: 0.3s;
-}
-
-.button:hover {
-  color: #000;
-  background-color: #0792c1;
-  padding: 25px clamp(40px, 8vw, 100px);
-  margin: clamp(30px, 7vw, 58px) 15px clamp(50px, 7vw, 113px);
+.row-button input {
+  background-color: cadetblue;
+  border-radius: 10px;
+  padding: 15px 20px;
 }
 
 .footer .wrapper-container {
