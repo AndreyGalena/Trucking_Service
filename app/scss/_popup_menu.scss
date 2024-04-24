@@ -1,0 +1,79 @@
+/* Первый слой */
+.nav-menu {
+    padding: 20px 10px;
+    .menu__list {
+        .sub-menu {
+            display: flex;
+            position: relative;
+            list-style-type: none;
+            font-size: 25px;
+            font-weight: 600;
+            font-style: italic;
+            padding: 0 23px;
+            z-index: 100;
+            .menu__link {
+                cursor: pointer;
+                color: #161615;
+            }
+            .menu__link:hover {
+                transform: scale(1.2);
+                color: #fff;
+            }
+            /* Второй слой */
+            .sub-menu__list {
+                position: absolute;
+                top: 35px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                min-width: 200px;
+                font-weight: 500;
+                text-align: center;
+                box-shadow: 1px 1px 10px black;
+                border-radius: 5px;
+                background-color: #b0acac;
+                .sub-menu__link {
+                    display: block;
+                    width: 100%;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #181d18;
+                    line-height: 35px;
+                    margin-bottom: 15px;
+                }
+                .sub-menu__link:hover {
+                    background-color: #fff;
+                }
+            }
+            .sub-menu__list>li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            /* Логика */
+            // при не нажатом popup.
+            .hide-content {
+                max-height: 0;
+                font-size: 0;
+                overflow: hidden;
+                transform: translateY(50%);
+                transition: all .5s ease-in 0s;
+            }
+            // при нажатом popup.
+            .show-content {
+                max-height: 500px;
+                font-size: 18px;
+                overflow: hidden;
+                transform: translateY(0%);
+                transition: all .5s ease-in 0s;
+            }
+            .drop-down {
+                cursor: pointer;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+

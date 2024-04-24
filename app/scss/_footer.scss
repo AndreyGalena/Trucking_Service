@@ -28,21 +28,11 @@
                 display: flex;
                 align-items: center;
                 font-style: italic;
-                // font-size: clamp(30px, 3vw, 50px);
                 font-size: 40px;
                 font-weight: 500;
                 text-transform: uppercase;
                 color: #161615;
-                // transition: 3s;
-                // transform: translateX(-300px);
             }
-            // .logo-footer {
-            //     transition: 3s;
-            //     transform: translateX(-300px);
-            // }
-            // .element-show {
-            //     transform: translateX(0) !important;
-            // }
         }
     }
     .map-block {
@@ -95,6 +85,9 @@
                 line-height: 20px;
                 text-align: center;
                 text-shadow: 2px 2px 1px rgb(216, 200, 200);
+                .address, .name-city, .zip-code {
+                    margin-bottom: 10px;
+                }
             }
             .my-mail-block {
                 padding: 20px 0;

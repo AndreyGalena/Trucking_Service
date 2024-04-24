@@ -11,26 +11,15 @@
 </head>
 
 <body>
-    <section class="section bg-header sticky-style">
+    <section class="section bg-header">
     <div class="wrapper-container">
         <header class="header">
             <div class="icon-block">
-                <div class="icon">
+                <a class="icon" href="#">
                     <img src="../../img/header_img/LC_logo_min.png" alt="icon">
                     <div class="line-vertically"></div>
                     <h2 class="logo">Express inc</h2>
-                </div>
-            </div>
-            <div class="contact-block">
-                <div class="contact">
-                    <h2 class="contact-title">Contact</h2>
-                    <strong class="tel">
-                        <a href="tel:8006165609"> (800) 616-5609</a>
-                    </strong>
-                    <div class="my-mail-block">
-                        <a class="my-mail" href="mailto:my_maile@freightcenter.com">my_maile@freightcenter.com</a>
-                    </div>
-                </div>
+                </a>
             </div>
             <!-- Это палочки бургера -->
             <div class="menu-btn">
@@ -40,31 +29,36 @@
             </div>
             <div class="menu-block">
                 <menu class="menu">
-                    <li class="item"><a href="#">Home</a>
+                    <li class="item">
+                        <a href="http://localhost:3000/">Home</a>
                         <div class="line-block">
                             <div class="line-left"></div>
                             <div class="line-rigte"></div>
                         </div>
                     </li>
-                    <li class="item"><a href="#">Service</a>
+                    <nav class="nav-menu">
+                        <ul class="menu__list">
+                            <li class="sub-menu">
+                                <span class="menu__link">We CAN</span>
+                                <div class="drop-down">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                                <!-- 2-уровень -->
+                                <ul class="sub-menu__list hide-content">
+                                    <li><a href="../our_difference.html" class="sub-menu__link">OUR DIFFERENCE</a></li>
+                                    <li><a href="../our_mission.html" class="sub-menu__link">OUR MISSION</a></li>
+                                    <li><a href="../our_commitment.html" class="sub-menu__link">OUR COMMITMENT</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <li class="item item-over"><a href="../about_as.html">About US</a>
                         <div class="line-block">
                             <div class="line-left"></div>
                             <div class="line-rigte"></div>
                         </div>
                     </li>
-                    <li class="item"><a href="#">Extension</a>
-                        <div class="line-block">
-                            <div class="line-left"></div>
-                            <div class="line-rigte"></div>
-                        </div>
-                    </li>
-                    <li class="item"><a href="#">Pricing</a>
-                        <div class="line-block">
-                            <div class="line-left"></div>
-                            <div class="line-rigte"></div>
-                        </div>
-                    </li>
-                    <li class="item"><a href="#">Help</a>
+                    <li class="item item-over"><a href="../our_contact.html">Contact Us</a>
                         <div class="line-block">
                             <div class="line-left"></div>
                             <div class="line-rigte"></div>
@@ -102,7 +96,7 @@
     <section class="section">
     <div class="wrapper-container">
         <div class="possibilities-block">
-            <div class="possibilities-block__block-one main-block">
+            <div class="main-block" style="background: url('../img/main-two_img/expedited-freight-company_min.webp')50% 50%/cover no-repeat;">
                 <div class="content">
                     <h3 class="title">Expedited:</h3>
                     <p class="subtitle">
@@ -117,7 +111,7 @@
                     </p>
                 </div>
             </div>
-            <div class="possibilities-block__block-two main-block">
+            <div class="main-block" style="background: url('../img/main-two_img/freight-shipping-768x768_min.webp')50% 50%/cover no-repeat;">
                 <div class="content">
                     <h3 class="title">Full Truckload (FTL):</h3>
                     <p class="subtitle">
@@ -132,7 +126,7 @@
                     </p>
                 </div>
             </div>
-            <div class="possibilities-block__block-three main-block">
+            <div class="main-block" style="background: url('../img/main-two_img/reefer-trailer_min.webp')50% 50%/cover no-repeat;">
                 <div class="content">
                     <h3 class="title">Temperature-Controlled:</h3>
                     <p class="subtitle">
@@ -146,7 +140,7 @@
                     </p>
                 </div>
             </div>
-            <div class="possibilities-block__block-four main-block">
+            <div class="main-block" style="background: url('../img/main-two_img/our-mission_min.webp')50% 50%/cover no-repeat;">
                 <div class="content">
                     <h3 class="title">Our Mission:</h3>
                     <p class="subtitle">
@@ -159,10 +153,7 @@
                     </p>
                 </div>
             </div>
-            <div class="possibilities-block__block-five main-block video-block">
-                <div class="media">
-                    <video class="media-video" src="../../video/main-two_video/our-team_(720p)_min.mp4" autoplay loop muted></video>
-                </div>
+            <div class="main-block video-block" style="background: url('../img/main-two_img/our-team_min.webp')50% 50%/cover no-repeat;">
                 <div class="content">
                     <h3 class="title">Our Difference:</h3>
                     <p class="subtitle">
@@ -175,10 +166,7 @@
                 </div>
             </div>
 
-            <div class="possibilities-block__block-six main-block video-block">
-                <div class="media">
-                    <video class="media-video" src="../../video/main-two_video/production_(720p)_min.mp4" autoplay loop muted></video>
-                </div>
+            <div class="main-block video-block" style="background: url('../img/main-two_img/our-trucks_min.webp')50% 50%/cover no-repeat;">
                 <div class="content">
                     <h3 class="title">Our Transport Services:</h3>
                     <p class="subtitle">
@@ -198,7 +186,6 @@
         <main class="main-three">
             <div class="input-block">
                 <form class="form" method="post" action="">
-                    <!-- {% csrf_token %} -->
                     <div class="row">
                         <div class="col-25">
                             <label for="name">First Name</label>
@@ -236,11 +223,11 @@
     <div class="wrapper-container">
         <!-- Logo -->
         <div class="icon-block">
-            <div class="icon">
+            <a href="#" class="icon">
                 <img src="../../img/header_img/LC_logo_min.png" alt="icon">
                 <div class="line-vertically"></div>
                 <h2 class="logo-footer">Express inc</h2>
-            </div>
+            </a>
         </div>
         <!-- Map -->
         <div class="map-block">
@@ -261,15 +248,12 @@
                     <strong class="name-company">
                         Corporate LC
                     </strong>
-                    <p class="address">
-                        35124 US-22 N
-                        <br>
-                        Palm Harbor, FL 35685<br>
-                        <br>
-                        MC No: 555954-C
-                        <br>
-                        DOT No: 4280011
-                    </p>
+                    <div class="address">
+                        <div class="address">1400-1424 Birthright St</div>
+                        <div class="name-city">Charleston</div>
+                        <div class="zip-code">SC 29407</div>
+                        <div class="country">United States</div>
+                    </div>
                 </span>
                 <div class="my-mail-block">
                     <a class="my-mail" href="mailto:my_maile@freightcenter.com">my_maile@freightcenter.com</a>

@@ -1,49 +1,66 @@
 // Gulp все файлы JS собирает в file.min.js
+// Элемент body.
+const clickBody = document.body;
 
-// Создаёт список элементов
-let cards = document.querySelectorAll('.comment');
-//--------------------------------------------------------------------------------
-// Функция
-function nameClass() {
-
-}
-// Стрелочная функция
-let addClass = () => {
-    // добавляет класс n элементу в списке.
-    cards[n].classList.add("active");
-}
-let removeClasses = () => {
-    // Удаляет все классы active в списке. 
-    for (let elem of cards) {
-        elem.classList.remove("active");
+// Если кликнул по body.
+clickBody.addEventListener('click', function(event) {
+    let item = document.querySelector('.show-content');
+    let icon = document.querySelector('.fa-caret-up');
+    const e = event.target;
+    
+    if (e.classList.contains("fa-caret-down") != true &&
+        e.classList.contains("fa-caret-up") != true && 
+        e.classList.contains("menu__link") != true &&
+        item != null) {
+            item.classList.replace("show-content", "hide-content");
+            icon.classList.replace("fa-caret-up", "fa-caret-down");
     }
-}
+});
+
 //---------------------------------------------------------------------------------
 // Вешаем общее событие на всю страничку.
 document.body.addEventListener("click", function(e) {
     // Возвращает элемент по которому кликнули.
-    const comment = e.target; // это исходный элемент, на котором 
-                              // произошло событие, в процессе всплытия он неизменен.
+    const item = e.target;
 
     // Возвращает родительский элемент.
-    const commentParent = e.target.parentElement;
+    const itemParent = e.target.parentElement;
+    // Возвращает прородителья(<ul class="sub-menu__list).
+    const contentActions = document.querySelector('.sub-menu__list');
 
-    // console.log(e.target.parentElement);           // возвращает элемент перед кликнутым
-    // console.log(e.target.previousElementSibling); // возвращает элемент перед кликнутым
-    // console.log(e.target.parentElement.parentElement.nextElementSibling); // .nextElementSibling - следующий элемент в DOM.
-
-    /* Проверка на существующий классa. */
     // Бургер меню.
-    if (commentParent.classList.contains("menu-btn")
+    if (itemParent.classList.contains("menu-btn")
         ||
-        commentParent.classList.contains("header__block")) {
+        itemParent.classList.contains("header__block")) {
         addActiveMenu();
     }
-    // Последующие действия.
-    if (comment.classList.contains("left")) {
-        nameClass();
-    } else if (comment.classList.contains("right")) {
-        removeClasses();
-        addClass();
+
+    // * При нажатии на popup. *
+    // при нажатии по стрелке.
+    if (item.classList.contains("fa-caret-down")) {
+        // меняет класс.
+        item.classList.replace("fa-caret-down", "fa-caret-up");
+        contentActions.classList.replace("hide-content", "show-content");
+    }
+    else  if (item.classList.contains("fa-caret-up")) {
+        item.classList.replace("fa-caret-up", "fa-caret-down");
+        contentActions.classList.replace("show-content", "hide-content");
+    } // при нажатии по тексту.
+    else if (item.classList.contains("menu__link")) {
+        const item_up = document.querySelector('.fa-caret-up');
+        const item_down = document.querySelector('.fa-caret-down');
+
+        if(item_up) { // не null
+            if(item_up.classList.contains("fa-caret-up")) {
+                item_up.classList.replace("fa-caret-up", "fa-caret-down");
+                contentActions.classList.replace("show-content", "hide-content");
+            }
+        } 
+        else if (item_down) { // не null
+            if(item_down.classList.contains("fa-caret-down")) {
+                item_down.classList.replace("fa-caret-down", "fa-caret-up");
+                contentActions.classList.replace("hide-content", "show-content");
+            }
+        }
     }
 })

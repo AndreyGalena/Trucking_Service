@@ -1,0 +1,82 @@
+.contacts-block {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.40)),
+        url("../img/main-one_img/bg_Video_min.webp")45% 33% no-repeat;
+        
+        h3 {
+            font-size: clamp(25px, 7vw, 40px);
+            font-weight: 700;
+            line-height: 24px;
+            color: #ff9700;
+            font-style: italic;
+            letter-spacing: 5px;
+            text-shadow: 2px 4px 2px #000;
+            margin: 50px 15px 50px 15px;
+            text-align: center;
+        }
+        
+        .contacts-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 500px;
+            background-color: rgb(241, 243, 243, 0.7);
+            margin-bottom: 40px;
+        .address-block {
+            margin: clamp(20px, 7vw, 70px) 15px clamp(20px, 7vw, 70px);
+            .name-company {
+                font-size: 30px;
+                font-weight: 400;
+                margin-bottom: clamp(20px, 7vw, 40px);
+                span {
+                    font-size: 35px;
+                    font-weight: 500;
+                    color: #c08022;
+                }
+            }
+            .address,
+            .name-city,
+            .zip-code,
+            .country {
+                font-size: 25px;
+                font-weight: 500;
+                color: #190a0a;
+                margin-bottom: 15px;
+            }
+            .mail {
+                font-size: 20px;
+                font-weight: 500;
+                color: #2c4db3;
+                margin: 25px 0px 15px;
+            }
+            .phone {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        .working-hours-block {
+            margin-bottom: clamp(25px, 7vw, 50px);
+            .title {
+                text-align: center;
+                font-size: 25px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            .text {
+                font-size: 20px;
+                font-weight: 500;
+                color: #4a4033;
+                .text-item {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
